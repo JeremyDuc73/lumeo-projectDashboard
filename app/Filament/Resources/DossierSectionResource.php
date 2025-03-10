@@ -22,7 +22,7 @@ class DossierSectionResource extends Resource
     public static function form(Forms\Form $form): Forms\Form
     {
         return $form->schema([
-            TextInput::make('title')->disabled(),
+            TextInput::make('title'),
 
             InputSliderGroup::make()
                 ->sliders([
