@@ -16,4 +16,10 @@ class EditDossierSection extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['progress'] = intval($data['progress'] ?? 0);
+        return $data;
+    }
 }
